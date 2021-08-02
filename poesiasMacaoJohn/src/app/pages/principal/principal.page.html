@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Listado de Poesias<de class=""></de></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item *ngFor="let contacto of poesias | async ">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Autor:  {{contacto.nombre}} </ion-card-subtitle>
+        <ion-card-subtitle>Fecha:  {{contacto.fecha}} </ion-card-subtitle>
+        <ion-card-title>{{contacto.titulo}} </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{contacto.poesia}}</p>
+      </ion-card-content>
+      <ion-card-subtitle>Comentarios: </ion-card-subtitle>
+      <ion-card-content>
+        <p>{{contacto.comentarios}}</p>
+      </ion-card-content>
+
+      <ion-item>
+        <ion-button fill="outline" slot="end" (click)="comentar(contacto)">Comentar</ion-button>
+      </ion-item>
+
+    </ion-card>
+  </ion-item>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="crear()" >
+      <ion-icon name="person-add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+
+
+</ion-content>

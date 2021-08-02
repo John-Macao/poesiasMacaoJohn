@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Registro <de class=""></de></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label>Nombres:</ion-label>
+    <ion-input [(ngModel)]="usuario.nombre"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Direccion:</ion-label>
+    <ion-input [(ngModel)]="usuario.direccion"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Edad:</ion-label>
+    <ion-input [(ngModel)]="usuario.edad"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-button color="primary" (click)="guardar()"> Guardar</ion-button>
+    <ion-button color="primary" (click)="regresarP()"> Cancelar</ion-button>
+  </ion-item>
+
+</ion-content>

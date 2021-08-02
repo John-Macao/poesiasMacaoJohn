@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Comentario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label>Comentar:</ion-label>
+    <ion-input [(ngModel)]="usuario.nombre"></ion-input>
+  </ion-item>
+
+    <ion-item>
+      <ion-button color="primary" (click)="guardar()"> Guardar</ion-button>
+      <ion-button color="primary" (click)="regresarP()"> Cancelar</ion-button>
+    </ion-item>
+
+
+</ion-content>
