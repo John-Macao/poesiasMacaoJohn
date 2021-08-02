@@ -1,0 +1,7 @@
+{
+  "name": "poesiasMacaoJohn",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
